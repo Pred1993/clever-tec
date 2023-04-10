@@ -1,0 +1,30 @@
+@import './variables';
+
+@mixin text($fontSize, $fontWeight, $fontFamily, $color) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    font-family: $fontFamily;
+    color: $color;
+}
+
+@mixin flex($display, $flexDirection, $justifyContent, $alignItems) {
+    display: $display;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin wrapper($background, $boxShadow, $borderRadius, $border) {
+    background: $background;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    border: $border;
+}
+
+@mixin resetButton() {
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    padding: 0;
+}

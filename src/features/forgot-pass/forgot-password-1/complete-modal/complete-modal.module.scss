@@ -1,0 +1,7 @@
+.commonContainer {
+    height: 206px !important;
+    @media screen and (max-width: 360px) {
+        height: 186px !important;
+        margin-top: 140px !important;
+    }
+}

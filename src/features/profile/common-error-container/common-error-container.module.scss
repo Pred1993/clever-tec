@@ -1,0 +1,33 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.errorContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include text(32px, 700, $fontFamily, #FFFFFF);
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    background: rgba(255, 82, 83, 0.7);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    .bookingText {
+        padding-top: 16px;
+        margin-left: 16px;
+        margin-bottom: 16px;
+        @media screen and (max-width: 320px) {
+            @include text(18px, 700, $fontFamily, #FFFFFF);
+            line-height: 28px;
+        }
+    }
+    .informText {
+        margin-left: 16px;
+        @include text(16px, 600, $fontFamily, #FFFFFF);
+        line-height: 24px;
+        @media screen and (max-width: 320px) {
+            @include text(14px, 600, $fontFamily, #FFFFFF);
+            line-height: 18px;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.tileContainer {
+    cursor: pointer;
+    width: 190px;
+    height: 470px;
+    @include wrapper(#FFFFFF, $boxShadow, 10px, $border);
+    text-align: start;
+
+
+    .img {
+        width: 174px;
+        height: 242px;
+        margin: 8px 7px 16px 7px;
+        @media screen and (max-width: 320px) {
+            margin: 8px auto 16px auto;
+        }
+    }
+
+    .title {
+
+        @include text(14px, 600, $fontFamily, $textColor);
+        height: 54px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.1px;
+        margin: 0 8px 0 8px;
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+        }
+
+        @media screen and (max-width: 768px) {
+            height: 36px;
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 17px;
+            p {
+                -webkit-line-clamp: 2;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            @include text(14px, 600, $fontFamily, $textColor);
+            height: 54px;
+            line-height: 18px;
+            margin-left: 16px;
+            margin-bottom: 8px;
+            p {
+                -webkit-line-clamp: 3;
+            }
+        }
+    }
+
+    .author {
+        @include flex(flex, row, flex-start, flex-end);
+        @include text(14px, 400, $fontFamily, #727272);
+        height: 36px;
+        margin: 0 8px 19px 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        @media screen and (max-width: 768px) {
+            @include text(12px, 700, $fontFamily, #727272);
+            height: 18px;
+            margin-bottom: 28px;
+            line-height: 18px;
+            text-transform: uppercase;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        @media screen and (max-width: 320px) {
+            @include text(12px, 400, $fontFamily, #727272);
+            margin-left: 16px;
+            line-height: 18px;
+            -webkit-line-clamp: 2;
+        }
+    }
+
+    .buttonContainer {
+        @include flex(flex, row, center, center);
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 288px;
+        height: 470px;
+    }
+}
+
+
+.tileContainerForProfile {
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 95%;
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 100%;
+        height: 95%;
+    }
+}

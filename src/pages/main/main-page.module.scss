@@ -1,0 +1,70 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.commonContainerNone {
+    display: none;
+}
+
+.commonContainer {
+    width: 75%;
+    margin-bottom: 62px;
+    //position: relative;
+    min-height: 100vh;
+
+    .text {
+        @include flex(flex, row, center, flex-start);
+        margin-top: 200px;
+
+        p {
+            @include text(32px, 700, $fontFamily, $textSecondColor);
+            line-height: 40px;
+            letter-spacing: 0.1px;
+            @media screen and (max-width: 320px) {
+                @include text(19px, 700, $fontFamily, $textSecondColor);
+                line-height: 28px;
+                text-align: center;
+            }
+
+            .br {
+                display: none;
+                @media screen and (max-width: 320px) {
+                    display: block;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-top: 226px;
+        }
+        @media screen and (max-width: 320px) {
+            margin-top: 134px;
+        }
+    }
+
+    .booksContainer {
+        width: 100%;
+        @include flex(flex, row, flex-start, normal);
+        flex-wrap: wrap;
+        row-gap: 24px;
+        column-gap: 21.5px;
+        @media screen and (max-width: 768px) {
+            row-gap: 35px;
+            column-gap: 32px;
+        }
+        @media screen and (max-width: 320px) {
+            @include flex(flex, column, flex-start, center);
+            flex-wrap: nowrap;
+            row-gap: 16px;
+            column-gap: normal;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        min-height: 100vh;
+    }
+    @media screen and (max-width: 320px) {
+        max-width: 100%;
+    }
+}
+

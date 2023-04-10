@@ -1,0 +1,81 @@
+.starsBookPage {
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 12px !important; ;
+    @media screen and (max-width: 768px) {
+        margin-left: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    @media screen and (max-width: 320px) {
+        margin-left: 0 !important;
+        margin-bottom: 0 !important;
+        font-size: 14px !important;
+    }
+}
+
+.starsListComponent {
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 24px !important;
+    @media screen and (max-width: 768px) {
+
+    }
+    @media screen and (max-width: 320px) {
+        margin-bottom: 16px !important;
+        height: 16px !important;
+    }
+}
+
+.starsTileComponent {
+    margin-left: 8px !important;
+    margin-bottom: 0 !important;
+    margin-right: 24px !important;
+    @media screen and (max-width: 768px) {
+        margin-left: 8px !important;
+        margin-bottom: 25px !important;
+    }
+    @media screen and (max-width: 320px) {
+        margin-left: 16px !important;
+        margin-bottom: 16px !important;
+        font-size: 14px !important;
+    }
+}
+
+.starListComponent {
+
+}
+
+.starBookPage {
+    margin-right: 12px !important;
+    @media screen and (max-width: 320px) {
+        margin-right: 8px !important;
+    }
+}
+
+.starListComponentForSvg {
+    @media screen and (max-width: 320px) {
+        width: 16px !important;
+        height: 16px !important;
+    }
+}
+
+.starBookPageForSvg {
+    @media screen and (max-width: 320px) {
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
+.starGetRattingForSvg {
+        width: 42px !important;
+        height: 42px !important;
+    @media screen and (max-width: 320px) {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+}
+
+.starGetRatting {
+    margin-right: 12px !important;
+}

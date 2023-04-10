@@ -1,0 +1,35 @@
+@import '../../../../common/sass/mixin';
+@import '../../../../common/sass/variables';
+
+.feedbackWrapper {
+    @include text(16px, 400, $fontFamily, #727272);
+    @include flex(flex, row, flex-start, center);
+    line-height: 24px;
+    margin-bottom: 16px;
+
+    :nth-child(n) {
+        margin-right: 24px;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 150px;
+    }
+
+    .name {
+        @include flex(flex, row, flex-start, center);
+        @media screen and (max-width: 320px) {
+            @include flex(flex, column, flex-start, flex-start);
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        @include text(15px, 400, $fontFamily, #727272);
+        line-height: 20px;
+        margin-bottom: 8px;
+        :first-child {
+            margin-right: 18px;
+        }
+    }
+}

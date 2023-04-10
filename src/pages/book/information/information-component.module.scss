@@ -1,0 +1,159 @@
+@import '../../../common/sass/mixin';
+@import '../../../common/sass/variables';
+
+.informationContainer {
+    margin-bottom: 62px;
+
+    h5 {
+        @include text(18px, 700, $fontFamily, $textColor);
+        line-height: 28px;
+        margin-top: 0;
+        margin-bottom: 16px;
+        @media screen and (max-width: 768px) {
+            @include text(16px, 600, $fontFamily, $textColor);
+            line-height: 24px;
+        }
+        @media screen and (max-width: 320px) {
+            @include text(18px, 700, $fontFamily, $textColor);
+            line-height: 28px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .border {
+        height: 1px;
+        width: 350px;
+        background-color: #EBEBEB;
+        margin-bottom: 16px;
+        @media screen and (max-width: 768px) {
+            width: 305px;
+            border: 1px solid #F9F9FA;
+        }
+        @media screen and (max-width: 768px) {
+            width: 209px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .information {
+        @include flex(flex, row, space-between, flex-start);
+
+        .wrapperContainer1 {
+            width: 329px;
+            margin-right: 146px;
+            @include flex(flex, column, flex-start, flex-start);
+
+            .line {
+                @include flex(flex, row, space-between, flex-start);
+                margin-bottom: 16px;
+
+                :first-child {
+                    @include text(16px, 600, $fontFamily, $textSecondColor);
+                    line-height: 24px;
+                    width: 118px;
+                    margin-right: 72px;
+                    @media screen and (max-width: 768px) {
+                        @include text(14px, 600, $fontFamily, $textSecondColor);
+                        line-height: 18px;
+                        width: 104px;
+                        margin-right: 34px;
+                    }
+                    @media screen and (max-width: 320px) {
+                        @include text(12px, 500, $fontFamily, $textSecondColor);
+                        line-height: 16px;
+                        letter-spacing: 0.2px;
+                    }
+                }
+
+                :last-child {
+                    @include text(16px, 400, $fontFamily, $textColor);
+                    line-height: 24px;
+                    width: 445px;
+                    @media screen and (max-width: 768px) {
+                        @include text(14px, 400, $fontFamily, $textColor);
+                        line-height: 18px;
+                        width: 167px;
+                    }
+                    @media screen and (max-width: 320px) {
+                        @include text(12px, 400, $fontFamily, $textColor);
+                        line-height: 16px;
+                        letter-spacing: 0.2px;
+                        width: 157px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 305px;
+                margin-right: 30px;
+            }
+            @media screen and (max-width: 320px) {
+                max-width: 288px;
+                margin-right: 30px;
+            }
+        }
+
+        .wrapperContainer2 {
+            width: 635px;
+            @include flex(flex, column, flex-start, flex-start);
+
+            .line {
+                @include flex(flex, row, space-between, flex-start);
+                margin-bottom: 16px;
+
+                :first-child {
+                    @include text(16px, 600, $fontFamily, $textSecondColor);
+                    line-height: 24px;
+                    width: 118px;
+                    margin-right: 72px;
+                    @media screen and (max-width: 768px) {
+                        @include text(14px, 600, $fontFamily, $textSecondColor);
+                        line-height: 18px;
+                        width: 104px;
+                        margin-right: 34px;
+                    }
+                    @media screen and (max-width: 320px) {
+                        @include text(12px, 500, $fontFamily, $textSecondColor);
+                        line-height: 16px;
+                        letter-spacing: 0.2px;
+                    }
+                }
+
+                :last-child {
+                    @include text(16px, 400, $fontFamily, $textColor);
+                    line-height: 24px;
+                    width: 445px;
+                    @media screen and (max-width: 768px) {
+                        @include text(14px, 400, $fontFamily, $textColor);
+                        line-height: 18px;
+                        width: 167px;
+                    }
+                    @media screen and (max-width: 320px) {
+                        @include text(12px, 400, $fontFamily, $textColor);
+                        line-height: 16px;
+                        letter-spacing: 0.2px;
+                        width: 157px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 305px;
+            }
+            @media screen and (max-width: 320px) {
+                max-width: 288px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            @include flex(flex, column, flex-start, flex-start);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 36px;
+    }
+    @media screen and (max-width: 320px) {
+        margin-bottom: 26px;
+    }
+}

@@ -1,0 +1,12 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.signUp {
+    @media screen and (max-width: 360px) {
+        @include flex(flex, column, center, center);
+        justify-content: flex-start !important;
+    }
+    .cleverLand {
+        margin-top: 16px;
+    }
+}

@@ -1,0 +1,102 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+
+section {
+    min-height: 100vh;
+    position: relative;
+
+    .content {
+        @include flex(flex, row, center, center);
+        height: 64px;
+        background: #F9F9FA;
+        margin-bottom: 42px;
+
+        .contentContainer {
+            width: 1110px;
+
+            .category {
+                cursor: pointer;
+                @include text(14px, 400, $fontFamily, $textSecondColor);
+                line-height: 18px;
+                letter-spacing: 0.1px;
+
+                @media screen and (max-width: 320px) {
+                    @include text(12px, 500, $fontFamily, $textSecondColor);
+                    line-height: 16px;
+                    letter-spacing: 0.2px;
+                }
+
+            }
+
+            .vector {
+                vertical-align: middle;
+                display: inline;
+                margin: 0 8px 0 8px;
+                @media screen and (max-width: 320px) {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 4px;
+                    margin-left: 4px;
+                }
+            }
+
+            .title {
+                @include text(14px, 400, $fontFamily, $textSecondColor);
+                line-height: 18px;
+                letter-spacing: 0.1px;
+                @media screen and (max-width: 768px) {
+                    @include text(16px, 400, $fontFamily, $textSecondColor);
+                    line-height: 24px;
+                }
+                @media screen and (max-width: 320px) {
+                    @include text(12px, 500, $fontFamily, $textSecondColor);
+                    line-height: 16px;
+                    letter-spacing: 0.2px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 640px;
+            }
+            @media screen and (max-width: 320px) {
+                max-width: 288px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 48px;
+            height: 88px;
+        }
+        @media screen and (max-width: 320px) {
+            @include text(12px, 500, $fontFamily, $textSecondColor);
+            margin-bottom: 20px;
+            height: 92px;
+        }
+    }
+
+    .contentDownload {
+        background: #b7b7b7;
+        .category {
+            @include text(14px, 400, $fontFamily, $textColor);
+            color: #363636 !important;
+        }
+
+
+    }
+
+    .bookPageContainer {
+        @include flex(flex, row, center, center);
+
+        .bookPage {
+
+            @media screen and (max-width: 320px) {
+                max-width: 288px;
+                margin-right: 8px;
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,18 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+
+.commonContainer {
+    height: 290px !important;
+    @media screen and (max-width: 360px) {
+        height: 278px !important;
+    }
+}
+
+.commonContainer2 {
+    height: 266px !important;
+    @media screen and (max-width: 360px) {
+        height: 230px !important;
+        margin-top: 120px !important;
+    }
+}

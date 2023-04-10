@@ -1,0 +1,16 @@
+.star {
+    font-size: 29px;
+    color: #f1e2bf;
+    cursor: pointer;
+    transition: .2s;
+    margin-right: 6px;
+
+    &:hover {
+        color: #FFBC1F;
+    }
+}
+
+.svg {
+    width: 26px;
+    height: 26px;
+}

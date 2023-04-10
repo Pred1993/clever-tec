@@ -1,0 +1,26 @@
+@import '../../sass/mixin';
+@import '../../sass/variables';
+
+.stars {
+    @include flex(flex, row, flex-start, center);
+    margin-left: 8px;
+    margin-bottom: 16px;
+    height: 24px;
+    line-height: 24px;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 25px;
+    }
+}
+.text {
+    @include text(14px, 400, $fontFamily, $textSecondColor);
+    height: 24px;
+    letter-spacing: 0.1px;
+    margin-left: 8px;
+    margin-bottom: 16px;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 25px;
+    }
+    @media screen and (max-width: 320px) {
+        @include text(12px, 400, $fontFamily, $textSecondColor);
+    }
+}

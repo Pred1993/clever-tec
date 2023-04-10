@@ -1,0 +1,28 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.select {
+    @include text(16px, 400, $fontFamily, $textSecondColor);
+    line-height: 24px;
+    height: 24px;
+    width: 150px;
+    appearance: none;
+    background: url('arrow-select.png') no-repeat right center #FFFFFF;
+    cursor: pointer;
+    border: 1px solid #FFFFFF;
+    text-align: start;
+    outline: none;
+    .option {
+        @include text(8px, 400, $fontFamily, $textSecondColor);
+        line-height: 24px;
+        padding: 5px;
+        background-color: transparent;
+    }
+    .option.selected {
+        background-color: $textSecondColor;
+        color: white;
+    }
+
+}
+
+

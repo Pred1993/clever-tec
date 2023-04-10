@@ -1,0 +1,160 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.headerContainer {
+    height: 105px;
+    margin-bottom: 47px;
+    position: relative;
+    @include flex(flex, row, center, center);
+    .header {
+        @include flex(flex, row, space-between, center);
+        width: 100%;
+        height: 58px;
+        margin-top: 32px;
+        margin-bottom: 15px;
+        position: relative;
+
+        .common {
+            display: none;
+            @media screen and (max-width: 768px) {
+                display: block;
+                border: none;
+                outline: none;
+                background-color: #FFFFFF;
+                cursor: pointer;
+                width: 27px;
+                margin-right: 24px;
+                height: 40px;
+                span {
+                    height: 2.7px;
+                    width: 100%;
+                    display: block;
+                    background-color: $textColor;
+                    @media screen and (max-width: 320px) {
+                        height: 2px;
+                    }
+                }
+            }
+            @media screen and (max-width: 320px) {
+                width: 20px;
+            }
+        }
+
+        .hamburger {
+            @media screen and (max-width: 768px) {
+                span {
+                    margin-bottom: 5px;
+                    transition: 0.1s all;
+                    @media screen and (max-width: 320px) {
+                        margin-bottom: 4px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                }
+            }
+        }
+
+        .cross {
+            @media screen and (max-width: 768px) {
+                span {
+                    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+                    height: 2.7px;
+                    margin-bottom: -2.5px;
+                    transition: 0.1s all;
+
+                    &:nth-child(1) {
+                        transform: translateY(0px) rotate(-45deg);
+                        @media screen and (max-width: 320px) {
+                            margin-bottom: -2px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        display: none;
+                    }
+
+                    &:nth-child(3) {
+                        transform: translateY(0px) rotate(45deg);
+                    }
+
+                    @media screen and (max-width: 320px) {
+                        margin-bottom: 0;
+                        height: 2px;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .library {
+            @include text(32px, 700, $fontFamily, $textColor);
+            line-height: 40px;
+            letter-spacing: 0.1px;
+            margin-left: -207px;
+            @media screen and (max-width: 768px) {
+                margin-left: 0;
+            }
+            @media screen and (max-width: 320px) {
+                margin-left: 0;
+                @include text(18px, 700, $fontFamily, $textColor);
+                line-height: 28px;
+            }
+        }
+
+        .ava {
+            cursor: pointer;
+            @include flex(flex, row, flex-end, center);
+            width: 305px;
+            height: 69px;
+            position: relative;
+
+            .userName {
+                @include text(14px, 600, $fontFamily, $textColor);
+                line-height: 18px;
+                margin-right: 16px;
+            }
+
+            .avatar {
+                width: 58px;
+                height: 58px;
+                border-radius: 150px;
+                overflow: hidden;
+            }
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            @include flex(flex, row, flex-start, center);
+            height: 40px;
+            margin-top: 32px;
+            margin-bottom: 22px;
+        }
+        @media screen and (max-width: 320px) {
+            margin: 0 16px 0 16px;
+        }
+    }
+
+    @media screen and (max-width: 1143px) {
+        height: 94px;
+        margin-bottom: 32px;
+    }
+    @media screen and (max-width: 320px) {
+        max-width: 320px;
+        height: 76px;
+        margin-bottom: 8px;
+    }
+}
+
+

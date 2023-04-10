@@ -1,0 +1,251 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat";
+    src: url('./common/fonts/Montserrat-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat";
+    src: url("./common/fonts/Montserrat-SemiBold.ttf");
+    font-style: normal;
+    font-weight: bold ;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat";
+    src: url("./common/fonts/Montserrat-Medium.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat";
+    src: url("./common/fonts/Montserrat-Bold.ttf");
+    font-style: normal;
+    font-weight: bold ;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+    color: #363636;
+    letter-spacing: 0.1px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    padding: 0;
+    font: inherit;
+}
+
+// swiper for book-page
+.mySwiper2 {
+    width: 445px;
+    height: 620px;
+
+    img {
+        @media screen and (max-width: 768px) {
+            width: 136px;
+            height: 198px;
+        }
+        @media screen and (max-width: 320px) {
+            width: 188px;
+            height: 260px;
+        }
+    }
+
+    margin-bottom: 16px;
+    @media screen and (max-width: 768px) {
+        width: 136px;
+        height: 238px;
+        margin-bottom: 16px;
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 188px;
+        height: 300px;
+        right: -50px;
+    }
+}
+
+.mySwiper2 .swiper-pagination {
+    display: none;
+
+    .swiper-pagination-bullet-active {
+        background: #363636;
+        width: 9px !important;
+        height: 9px !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 7px;
+        height: 7px;
+    }
+
+    @media screen and (max-width: 768px) {
+        @include flex(flex, row, center, center);
+        bottom: 2px !important;
+    }
+}
+
+.mySwiper {
+    width: 445px;
+    height: 110px;
+    box-sizing: border-box;
+    @media screen and (max-width: 768px) {
+        display: none !important;
+    }
+}
+
+
+.mySwiper .swiper-slide {
+    width: 20%;
+    height: 100%;
+}
+
+
+.mySwiper .swiper-slide-thumb-active {
+    img {
+        border-radius: 3px;
+        border: 2px solid transparent;
+        background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+
+    }
+}
+
+// swiper for profile
+
+.mySwiperForHistory .swiper-wrapper {
+    width: 100%;
+    height: 518px;
+    @include flex(flex, row, flex-start, center);
+}
+
+.mySwiperForHistory .swiper-slide {
+    width: 255px !important;
+    @media screen and (max-width: 768px) {
+        width: 190px !important;
+    }
+    @media screen and (max-width: 320px) {
+        width: 100% !important;
+    }
+}
+
+.mySwiperForHistory .swiper-slide-thumb-active {
+    img {
+        border-radius: 3px;
+        border: 2px solid transparent;
+        background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+
+    }
+}
+
+.mySwiperForHistory .swiper-pagination {
+
+    @include flex(flex, row, center, center);
+    bottom: 2px !important;
+
+    .swiper-pagination-bullet-active {
+        background: #363636;
+        width: 9px !important;
+        height: 9px !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 7px;
+        height: 7px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+    }
+}
+
+//common styles for swiper
+.swiper-scrollbar-drag {
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    height: 0.6rem;
+}
+
+.swiper-scrollbar-horizontal {
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    height: 0.6rem !important;
+}
+
+.mySwiper:hover .swiper-scrollbar-horizontal {
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}

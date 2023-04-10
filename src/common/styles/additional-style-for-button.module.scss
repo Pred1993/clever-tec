@@ -1,0 +1,54 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.buttonBookPage {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 150% !important;
+    letter-spacing: 0.2px !important;
+    width: 350px !important;
+    height: 52px !important;
+    border-radius: 30px !important;
+    @media screen and (max-width: 768px) {
+        width: 306px !important;
+    }
+    @media screen and (max-width: 320px) {
+        width: 288px !important;
+        line-height: 18px !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+    }
+}
+
+.buttonListComponent {
+    width: 174px !important;
+    @media screen and (max-width: 320px) {
+        width: 186px !important;
+    }
+}
+
+.buttonAssess {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 150% !important;
+    letter-spacing: 0.2px !important;
+    width: 350px !important;
+    height: 52px !important;
+    border-radius: 30px !important;
+    @media screen and (max-width: 768px) {
+        width: 640px !important;
+    }
+    @media screen and (max-width: 320px) {
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        width: 288px !important;
+        line-height: 18px !important;
+    }
+}
+
+.buttonTileComponent {
+    width: 256px !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+}
+

@@ -1,0 +1,224 @@
+@import "../sass/variables";
+@import "../sass/mixin";
+
+
+.signUp {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);;
+    @include flex(flex, column, center, center);
+    min-height: 100vh;
+    width: 100%;
+
+    .cleverLand {
+        @include text(32px, 700, $fontFamily, #FFFFFF);
+        line-height: 40px;
+        margin-bottom: 46px;
+        @media screen and (max-width: 360px) {
+            @include text(18px, 700, $fontFamily, #FFFFFF);
+            line-height: 28px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .commonContainer {
+        background: #FFFFFF;
+        border-radius: 16px;
+        width: 528px;
+        height: 492px;
+        @include flex(flex, row, center, center);
+
+        .container {
+            width: 80%;
+            height: 80%;
+            @include flex(flex, column, center, flex-start);
+            .stepContainer {
+                @include flex(flex, column, flex-start, flex-start);
+                margin-bottom: 32px;
+
+                .register {
+                    @include text(24px, 700, $fontFamily, $textColor);
+                    line-height: 30px;
+                    margin: 0 0 8px 0;
+
+                }
+
+                .step {
+                    @include text(14px, 600, $fontFamily, $textColor);
+                    line-height: 18px;
+                }
+            }
+
+            .formContainer {
+                @include flex(flex, column, space-around, normal);
+                width: 100%;
+
+                .labelContainer {
+                    position: relative;
+                    width: 100%;
+
+                    .inputCommon {
+                        position: relative;
+                        width: 100%;
+                        cursor: pointer;
+                        height: 56px;
+                        @include text(14px, 400, $fontFamily, $textColor);
+                        line-height: 18px;
+                        background: #F9F9FA;
+                        border: none;
+                        border-bottom: 1px solid #BFC4C9;
+                        padding-left: 12px;
+                        z-index: 2;
+                        outline: none;
+
+                        &:focus {
+                            z-index: 0;
+                        }
+
+                        &:focus::placeholder {
+                            color: transparent;
+                        }
+                    }
+
+                    .inputCommonError {
+                        border-bottom: 1px solid rgb(244, 44, 79);
+                    }
+
+                    .labelFocus {
+                        @include text(12px, 500, $fontFamily, $textSecondColor);
+                        line-height: 16px;
+                        letter-spacing: 0.2px;
+                        position: absolute;
+                        top: 50%;
+                        background-color: transparent;
+                        transform: translateY(-26px);
+                        padding-left: 12px;
+                        z-index: 1;
+                    }
+
+                    .label {
+                        z-index: 3;
+                    }
+
+                    .eyeStyles {
+                        @include resetButton();
+                        position: absolute;
+                        bottom: 17px;
+                        right: 16px;
+                        z-index: 4;
+                    }
+
+                    .successPassword {
+                        position: absolute;
+                        bottom: 17px;
+                        right: 40px;
+                        z-index: 4;
+                    }
+                }
+
+                .buttonSubmit {
+                    width: 100%;
+                    @include wrapper(#FFFFFF, none, 20px, $border);
+                    @include text(16px, 600, $fontFamily, #FFFFFF);
+                    line-height: 150%;
+                    letter-spacing: 0.2px;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+                    border-radius: 30px;
+                    margin-top: 32px;
+                    margin-bottom: 16px;
+                    height: 52px;
+                    @media screen and (max-width: 360px) {
+                        @include text(12px, 600, $fontFamily, #FFFFFF);
+                        margin-top: 22px;
+                        line-height: 18px;
+                        height: 40px;
+                    }
+                }
+
+                .buttonSubmitDisable {
+                    background: #EBEBEB;
+                }
+
+                .emptyDiv {
+                    height: 32px;
+                    margin-bottom: 16px;
+                }
+
+                .helper {
+                    @include text(12px, 500, $fontFamily, $textSecondColor);
+                    line-height: 16px;
+                    letter-spacing: 0.2px;
+                    margin: 0 0 16px 12px;
+                    height: 32px;
+                    @media screen and (max-width: 360px) {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .red {
+                    color: rgb(244, 44, 79)
+                }
+
+                .helperError {
+                    @include text(12px, 500, $fontFamily, $textSecondColor);
+                    line-height: 16px;
+                    letter-spacing: 0.2px;
+                    margin: 0 0 16px 12px;
+                    color: rgb(244, 44, 79);
+                    height: 32px;
+                    @media screen and (max-width: 360px) {
+                        margin-bottom: 10px;
+                    }
+
+                }
+
+            }
+
+            .enterContainer {
+                @include flex(flex, row, flex-start, center);
+
+                .account {
+                    @include text(16px, 400, $fontFamily, #727272);
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                    margin-right: 16px;
+                    @media screen and (max-width: 360px) {
+                        @include text(15px, 400, $fontFamily, #727272);
+                        line-height: 20px;
+                    }
+                }
+
+                .arrow {
+                    @include text(12px, 600, $fontFamily, $textColor);
+                    @include resetButton();
+                    @include flex(flex, row, flex-start, center);
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    text-transform: uppercase;
+                    :first-child {
+                        margin-right: 12px;
+                    }
+                }
+
+                @media screen and (max-width: 360px) {
+                    @include flex(flex, column, flex-start, flex-start);
+                }
+            }
+
+            @media screen and (max-width: 360px) {
+                width: 90%;
+                height: 90%;
+            }
+
+        }
+
+        @media screen and (max-width: 360px) {
+            width: 90%;
+            height: 464px;
+        }
+
+    }
+
+}
+
+

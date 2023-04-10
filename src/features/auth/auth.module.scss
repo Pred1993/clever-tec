@@ -1,0 +1,47 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.signUp {
+
+    .cleverLand {
+        @media screen and (max-width: 360px) {
+            margin-top: 16px;
+        }
+
+    }
+
+    @media screen and (max-width: 360px) {
+        @include flex(flex, column, center, center);
+        justify-content: flex-start !important;
+    }
+}
+
+.emptyDiv {
+
+    @media screen and (max-width: 360px) {
+        height: 20px !important;
+        margin-bottom: 0;
+    }
+}
+
+.helper {
+    text-align: start;
+    margin-bottom: 0 !important;
+    @include resetButton();
+}
+
+.helperError {
+    margin-bottom: 0 !important;
+    height: 20px !important;
+}
+
+.buttonRestore {
+    @include text(12px, 500, $fontFamily, $textColor);
+    @include resetButton();
+    margin-left: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+
+

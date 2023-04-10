@@ -1,0 +1,24 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.exitModals {
+    @include text(18px, 700, $fontFamily, $textColor);
+    line-height: 28px;
+    @include flex(flex, column, space-evenly, flex-end);
+    @include wrapper(#FFFFFF, $boxShadowSecond, 0 0 10px 10px, $border);
+    width: 270px;
+    height: 152px;
+    position: absolute;
+    z-index: 10;
+    top: 75px;
+    right: 3px;
+    :nth-child(1n) {
+        margin-right: 24px;
+    }
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+    .buttonExit {
+        @include resetButton();
+    }
+}

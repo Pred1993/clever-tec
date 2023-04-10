@@ -1,0 +1,75 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.commonContainer {
+    background: #FFFFFF;
+    border-radius: 16px;
+    width: 600px;
+    height: 314px;
+    margin-top: 100px;
+    @include flex(flex, row, center, center);
+
+
+    .container {
+        width: 70%;
+        height: 80%;
+        @include flex(flex, column, center, center);
+
+        .title {
+            @include text(24px, 700, $fontFamily, $textColor);
+            line-height: 30px;
+            margin-bottom: 32px;
+            @media screen and (max-width: 360px) {
+                @include text(18px, 700, $fontFamily, $textColor);
+                line-height: 28px;
+                margin-bottom: 24px;
+                text-align: center;
+            }
+
+        }
+
+        .message {
+            text-align: center;
+            @include text(16px, 400, $fontFamily, $textColor);
+            line-height: 24px;
+            @media screen and (max-width: 360px) {
+                @include text(15px, 400, $fontFamily, $textColor);
+                line-height: 20px;
+            }
+
+        }
+
+        .buttonRepeat {
+            width: 100%;
+            @include wrapper(#FFFFFF, none, 20px, $border);
+            @include text(16px, 600, $fontFamily, #FFFFFF);
+            line-height: 150%;
+            letter-spacing: 0.2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+            border-radius: 30px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            height: 52px;
+            @media screen and (max-width: 360px) {
+                @include text(12px, 600, $fontFamily, #FFFFFF);
+                margin-top: 24px;
+                line-height: 18px;
+                height: 40px;
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            width: 90%;
+            height: 80%;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        width: 90%;
+        height: 250px;
+    }
+
+}

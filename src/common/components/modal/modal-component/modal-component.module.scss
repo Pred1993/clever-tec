@@ -1,0 +1,94 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.backGround {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(54, 54, 54, 0.3);
+    backdrop-filter: blur(8px);
+    z-index: 15;
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        height: 100%;
+    }
+    @media screen and (max-width: 400px) {
+        width: 100vw;
+        height: 100%;
+    }
+}
+
+body.backGround {
+    overflow: hidden;
+}
+
+.modal {
+    @include flex(flex, row, center, center);
+    @include wrapper(#FFFFFF, none, 16px, $border);
+    position: fixed !important;
+    width: 528px;
+    height: 512px;
+    top: calc(50vh - (528px / 2));
+    left: calc(50vw - (512px / 2));
+    z-index: 16;
+    filter: none !important;
+
+
+    .contentContainer {
+        @include flex(flex, column, space-between, center);
+        width: 80%;
+        height: 80%;
+
+        .title {
+            @include text(24px, 700, $fontFamily, $textColor);
+            line-height: 30px;
+            text-align: center;
+            @media screen and (max-width: 400px) {
+                @include text(18px, 700, $fontFamily, $textColor);
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            height: 88%;
+        }
+        @media screen and (max-width: 400px) {
+            height: 88%;
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        top: 30px
+    }
+
+    @media screen and (max-width: 400px) {
+        width: 300px;
+        height: 438px;
+        top: 57px;
+        left: 48px;
+    }
+    @media screen and (max-width: 320px) {
+        width: 300px;
+        height: 438px;
+        top: 62px;
+        left: 9px;
+    }
+}
+
+.modalEdit {
+    height: 620px;
+    top: calc(50vh - (620px / 2));
+    @media screen and (max-width: 768px) {
+        height: 560px;
+        top: 6px
+    }
+    @media screen and (max-width: 400px) {
+        height: 514px;
+        top: 57px;
+        left: 48px;
+    }
+}

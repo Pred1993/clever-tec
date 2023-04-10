@@ -1,0 +1,26 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.contents {
+    margin-bottom: 32px;
+
+    .title {
+        @include text(24px, 700, $fontFamily, $textColor);
+        margin-bottom: 8px;
+        line-height: 30px;
+        @media screen and (max-width: 320px) {
+            @include text(18px, 700, $fontFamily, $textColor);
+            line-height: 28px;
+        }
+    }
+
+    .helper {
+        @include text(16px, 400, $fontFamily, $textSecondColor);
+        line-height: 24px;
+        @media screen and (max-width: 320px) {
+            @include text(15px, 400, $fontFamily, $textSecondColor);
+            line-height: 20px;
+        }
+    }
+}
+

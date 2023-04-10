@@ -1,0 +1,65 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.errorCommon {
+    @include flex(flex, row, center, center);
+    width: 1110px;
+    border: 1.5px solid #F42C4F;
+    border-radius: 5px;
+    background: #FEEBEA;
+    position: absolute;
+    top: 63px;
+    z-index: 10;
+    height: 80px;
+
+    .error {
+        @include flex(flex, row, space-between, center);
+
+        .errorImg {
+            margin-right: 24px;
+            @media screen and (max-width: 768px) {
+                margin-right: 12px;
+            }
+        }
+
+        span {
+            @include text(16px, 600, $fontFamily, $textColor);
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            width: 950px;
+            @media screen and (max-width: 768px) {
+                @include text(14px, 600, $fontFamily, $textColor);
+                line-height: 18px;
+                width: 546px;
+            }
+            @media screen and (max-width: 320px) {
+                width: 186px;
+            }
+        }
+
+        button {
+            cursor: pointer;
+            padding: 0;
+            border: none;
+            color: inherit;
+            background-color: transparent;
+        }
+
+        @media screen and (max-width: 320px) {
+            @include flex(flex, row, space-between, flex-start);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 640px;
+        height: 72px;
+
+    }
+    @media screen and (max-width: 320px) {
+        width: 288px;
+        height: 78px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+

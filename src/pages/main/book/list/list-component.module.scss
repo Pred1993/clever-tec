@@ -1,0 +1,157 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.listContainer {
+    width: 100%;
+    @include wrapper(#FFFFFF, $boxShadow, 12px, $border);
+    margin-bottom: 16px;
+    @include flex(flex, row, flex-start, flex-start);
+    text-align: start;
+    cursor: pointer;
+
+    &:last-child {
+        margin-bottom: 24px;
+    }
+
+    .img {
+        width: 120px;
+        height: 170px;
+        margin: 24px 16px 24px 16px;
+        @media screen and (max-width: 768px) {
+            height: 172px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        @media screen and (max-width: 320px) {
+            width: 70px;
+            height: 100px;
+            margin-top: 16px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+    }
+
+    .description {
+        margin-right: 24px;
+        width: 649px;
+        margin-top: 24px;
+
+        .title {
+            @include text(22px, 700, $fontFamily, $textColor);
+            line-height: 32px;
+            margin-top: 0;
+            margin-bottom: 8px;
+            @media screen and (max-width: 768px) {
+                @include text(24px, 700, $fontFamily, $textColor);
+                line-height: 30px;
+            }
+            @media screen and (max-width: 320px) {
+                @include text(14px, 600, $fontFamily, $textColor);
+                line-height: 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                margin-bottom: 3px;
+            }
+
+        }
+
+        .author {
+            @include text(16px, 400, $fontFamily, #727272);
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            margin-bottom: 24px;
+            @media screen and (max-width: 768px) {
+                margin-bottom: 16px;
+            }
+            @media screen and (max-width: 320px) {
+                @include text(12px, 400, $fontFamily, #727272);
+                line-height: 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                margin-bottom: 3px;
+            }
+
+        }
+
+        .ratingContainer {
+            @include flex(flex, row, space-between, center);
+
+            .buttonContainer {
+                @include flex(flex, row, center, center);
+
+                .buttonAbolish {
+                    @include text(12px, 600, $fontFamily, #FFFFFF);
+                    line-height: 18px;
+                    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+                    margin-right: 0;
+                    width: 200px;
+                    height: 40px;
+                }
+
+                .dateHandedFrom {
+                    text-align: center;
+                    width: 200px;
+                    @include text(24px, 700, $fontFamily, #FF5253);
+                    line-height: 30px;
+                    text-transform: uppercase;
+                    @media screen and (max-width: 768px) {
+                        @include text(16px, 600, $fontFamily, #FF5253);
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 16px;
+            }
+            @media screen and (max-width: 320px) {
+                @include flex(flex, column, flex-start, flex-start);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-top: 16px;
+            width: 464px;
+        }
+        @media screen and (max-width: 320px) {
+            margin-top: 16px;
+            width: 186px;
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        @include flex(flex, row, flex-start, flex-start);
+        width: 640px;
+        &:last-child {
+            margin-bottom: 32px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        @include flex(flex, row, flex-start, flex-start);
+        width: 288px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.listContainerForProfile {
+    width: 1110px;
+
+    .descriptionForProfile {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 0 !important;
+    }
+}

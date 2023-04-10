@@ -1,0 +1,39 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.superInput {
+    @include text(14px, 400, $fontFamily, $textColor);
+    letter-spacing: 0.1px;
+    height: 38px;
+    width: 350px;
+    caret-color: rgb(248, 54, 0);
+    @include wrapper(#FFFFFF, $boxShadow, 599px, $border);
+    outline: none;
+    padding-left: 40px;
+
+    &::placeholder {
+        color: #A7A7A7;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+    &:focus {
+        caret-color: rgb(248, 54, 0);
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 274px;
+        &:focus::placeholder {
+            color: #A7A7A7;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        width: 288px;
+        border-radius: 599px;
+        padding-left: 20px;
+        @include text(12px, 400, $fontFamily, $textColor);
+        line-height: 18px;
+        caret-color: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    }
+}

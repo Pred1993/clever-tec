@@ -1,0 +1,67 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.buttonAssess {
+    @include text(12px, 600, $fontFamily, #FFFFFF);
+    line-height: 18px;
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    margin-right: 0;
+    width: 90%;
+    height: 40px;
+    border: 1px solid rgb(191, 196, 201);
+}
+
+.buttonEdit {
+    @include text(12px, 600, $fontFamily, $textColor);
+    line-height: 18px;
+    border: 1px solid #BFC4C9;
+    margin-right: 0;
+    width: 90%;
+    height: 40px;
+}
+
+.buttonCommon {
+    cursor: pointer;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    width: 166px;
+    height: 40px;
+}
+
+.buttonNotBooked {
+    @include wrapper(#FFFFFF, none, 20px, $border);
+    @include text(12px, 600, $fontFamily, #FFFFFF);
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+}
+
+.buttonBooked {
+    @include wrapper(#F9F9FA, none, 20px, $borderSecond);
+    @include text(12px, 600, $fontFamily, $textColor);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.buttonDisabled {
+    @include wrapper(#F9F9FA, none, 20px, $borderSecond);
+    @include text(12px, 600, $fontFamily, $textSecondColor);
+}
+
+
+.closeModal {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    @include resetButton;
+    img {
+        @media screen and (max-width: 400px) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        top: 14px
+    }
+    @media screen and (max-width: 400px) {
+       top: 14px
+    }
+}
+

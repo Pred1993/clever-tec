@@ -1,0 +1,54 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.footerContainer {
+    height: 56px;
+    @include flex(flex, row, center, center);
+
+    .footer {
+        border-top: 1px solid #BFC4C9;
+        @include flex(flex, row, space-between, center);
+        width: 100%;
+
+        .text {
+            @include text(16px, 400, $fontFamily, $textColor);
+            line-height: 24px;
+            letter-spacing: 0.1px;
+
+            .br {
+                display: none;
+                @media screen and (max-width: 320px) {
+                    display: inline;
+                }
+            }
+
+            @media screen and (max-width: 320px) {
+                @include text(15px, 400, $fontFamily, $textColor);
+                line-height: 20px;
+                text-align: center;
+                margin-bottom: 16px;
+                width: 288px;
+                border-top: 1px solid #BFC4C9;
+                p {
+                    margin-top: 16px;
+                }
+            }
+        }
+
+        .icons {
+            width: 168px;
+            @include flex(flex, row, space-between, center);
+        }
+
+        @media screen and (max-width: 320px) {
+            @include flex(flex, column, flex-start, center);
+            border-top: none
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        @include flex(flex, row, center, flex-start);
+        height: 104px;
+
+    }
+}

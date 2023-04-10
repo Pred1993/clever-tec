@@ -1,0 +1,98 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.active {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.activeLine {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);;
+        width: 255px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+
+.navGenres {
+    @include flex(flex, column, flex-start, flex-start);
+    @include text(18px, 700, $fontFamily, $textActiveColor);
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    margin-right: 6px;
+    width: 25%;
+
+    .windowOn {
+        width: 255px;
+        height: 36px;
+        margin-bottom: 16px;
+        position: relative;
+        @include flex(flex, row, flex-start, center);
+        .chevron {
+            margin-left: 82px;
+        }
+    }
+    .windowOff {
+        width: 255px;
+        height: 36px;
+        margin-bottom: 50px;
+        position: relative;
+        @include flex(flex, row, flex-start, center);
+        .chevron {
+            margin-left: 82px;
+        }
+    }
+    .genresNone {
+        display: none;
+    }
+    .genres {
+        margin-left: 20px;
+        .allBooks {
+            @include text(18px, 700, $fontFamily, $textActiveColor);
+            line-height: 28px;
+            margin-left: 0;
+            margin-bottom: 16px;
+        }
+        .genre {
+            margin-bottom: 16px;
+            margin-left: 4px;
+            @include text(16px, 400, $fontFamily, $textColor);
+            line-height: 24px;
+            letter-spacing: 0.1px;
+
+            .number {
+                @include text(14px, 400, $fontFamily, $textSecondColor);
+            }
+
+            &:last-child {
+                margin-bottom: 42px;
+            }
+
+        }
+    }
+
+    .terms {
+        width: 255px;
+        height: 36px;
+        margin-bottom: 42px;
+        position: relative;
+
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+    @media screen and (max-width: 320px) {
+        display: none;
+    }
+}

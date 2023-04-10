@@ -1,0 +1,14 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.mainPageContainer {
+    @include flex(flex, row, center, flex-start);
+    min-height: 100vh;
+    .mainPage {
+        display: flex;
+    }
+    @media screen and (max-width: 768px) {
+        //max-height: 100vh;
+    }
+}
+

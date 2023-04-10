@@ -1,0 +1,6 @@
+@import 'src/common/sass/mixin';
+@import 'src/common/sass/variables';
+
+.starsContainer {
+    @include flex(flex, row, flex-start, center);
+}
