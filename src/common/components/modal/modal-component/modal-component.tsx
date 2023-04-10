@@ -1,12 +1,11 @@
-import React, {FC} from 'react';
-import {createPortal} from 'react-dom';
+import React, { FC } from 'react';
+import { createPortal } from 'react-dom';
 
-import {CommentsBookType, GetAuthMeCommentsType} from '../../../../app/app-api';
-import {ButtonComponent} from '../../button';
-import {CalendarComponent} from '../../calendar';
-import {ReviewComponent} from '../../review';
+import { CommentsBookType, GetAuthMeCommentsType } from '../../../../app/app-api';
+import { CalendarComponent } from '../../calendar';
+import { ReviewComponent } from '../../review';
 
-import styles from './modal-component.module.scss'
+import styles from './modal-component.module.scss';
 
 type ModalComponentType = {
     show: boolean
@@ -66,12 +65,7 @@ export const ModalComponent: FC<ModalComponentType> = (
                  onClick={onClickHandler}
                  onKeyUp={() => null}
 
-            >
-                <ButtonComponent data-test-id='modal-close-button'>
-                    {true}
-                </ButtonComponent>
-
-            </div>
+            />
 
             <div data-test-id='booking-modal' role="button" tabIndex={0}
                  className={userBooked ? `${styles.modal} ${styles.modalEdit}` : styles.modal}

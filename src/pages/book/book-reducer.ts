@@ -134,14 +134,3 @@ export const deleteBookingTC =
                 dispatch(setLoaderAC(false));
             }
         };
-
-export const thunkForTest =
-    (bookId: string): AppThunkType =>
-        async () => {
-            try {
-                await api.forTest(bookId);
-
-            } catch (e) {
-                const error = e as Error | AxiosError;
-            }
-        };

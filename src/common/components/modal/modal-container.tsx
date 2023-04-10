@@ -1,23 +1,21 @@
-import React, {FC, useEffect, useState} from 'react';
-import {useDispatch} from 'react-redux';
-import {format} from 'date-fns';
-import {ru} from 'date-fns/locale';
+import React, { FC, useEffect, useState } from 'react';
+import { format } from 'date-fns';
+import { ru } from 'date-fns/locale';
 
 import {
     BookingType,
     CommentsBookType,
     DeliveryType,
-    GetAuthMeCommentsType
+    GetAuthMeCommentsType,
 } from '../../../app/app-api';
-import {AppDispatchType, useAppSelector} from '../../../app/store';
-import {userIdSelector} from '../../../app/use-app-selectors';
-import iconCloseModal from '../../../assets/image/iconCloseModal.svg'
-import {thunkForTest} from '../../../pages/book/book-reducer';
-import {ButtonComponent} from '../button';
+import { useAppSelector } from '../../../app/store';
+import { userIdSelector } from '../../../app/use-app-selectors';
+import iconCloseModal from '../../../assets/image/iconCloseModal.svg';
+import { ButtonComponent } from '../button';
 
-import {ModalComponent} from './modal-component';
+import { ModalComponent } from './modal-component';
 
-import commonButton from '../../styles/common-button.module.scss'
+import commonButton from '../../styles/common-button.module.scss';
 import styles from './modal-container.module.scss';
 
 type ModalContainerType = {
@@ -45,7 +43,6 @@ export const ModalContainer: FC<ModalContainerType> = ({
     const [showModal, setShowModal] = useState(false);
     const [clickDate, setClickDate] = useState(false);
 
-    const dispatch = useDispatch<AppDispatchType>();
     const userId = useAppSelector(userIdSelector);
 
     const order = booking?.order
@@ -64,7 +61,6 @@ export const ModalContainer: FC<ModalContainerType> = ({
     const onclickHandlerOpen = (e: React.MouseEvent) => {
         e.stopPropagation();
         setShowModal(true)
-        dispatch(thunkForTest(bookId))
         if (dateOrder) {
             setClickDate(true)
         }
