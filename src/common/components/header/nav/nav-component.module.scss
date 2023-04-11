@@ -11,7 +11,7 @@
 
 .navGenres {
     display: none;
-    @media screen and (max-width: 1143px) {
+    @media screen and (max-width: 768px) {
         text-align: start;
         position: absolute;
         z-index: 50;

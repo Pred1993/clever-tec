@@ -1,20 +1,22 @@
 @import 'src/common/sass/mixin';
 @import 'src/common/sass/variables';
-    .app {
-        background: rgba(54, 54, 54, 0.3);
-        filter: blur(10px);
-        position: relative;
-        .loader {
-            display: inline-block;
-            position: fixed;
-            top: 40px;
-            background: transparent;
-        }
+
+.app {
+    background: rgba(54, 54, 54, 0.3);
+    filter: blur(10px);
+    position: relative;
+
+    .loader {
+        display: inline-block;
+        position: fixed;
+        top: 40px;
+        background: transparent;
     }
+}
 
 
-    .preloader {
-        @include flex(flex, row, center, center);
-        position: absolute;
-    }
+.preloader {
+    @include flex(flex, row, center, center);
+    position: absolute;
+}
 
