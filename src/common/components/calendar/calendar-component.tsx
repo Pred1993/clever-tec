@@ -64,6 +64,7 @@ export const CalendarComponent: FC<CalendarComponentType> = ({
     const onChangeOptionHandler = (option: string) => {
         onChangeOption(option)
         const findMonth = state.monthsNames.find((el) => el.month === option.split(' ')[0])
+
         if (findMonth) {
             functions.setSelectedMonth(utilCreateMonth({date: new Date(state.selectedYear, findMonth.monthIndex)}))
         }
