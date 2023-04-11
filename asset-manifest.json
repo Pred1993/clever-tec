@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/clever-tec/static/css/main.4b37256a.css",
-    "main.js": "/clever-tec/static/js/main.86015653.js",
+    "main.css": "/clever-tec/static/css/main.0dedd9cf.css",
+    "main.js": "/clever-tec/static/js/main.03c75d5c.js",
     "static/media/Montserrat-SemiBold.ttf": "/clever-tec/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
     "static/media/Montserrat-Medium.ttf": "/clever-tec/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
     "static/media/Montserrat-Bold.ttf": "/clever-tec/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
@@ -39,11 +39,11 @@
     "static/media/iconArrow.svg": "/clever-tec/static/media/iconArrow.278783190b4c103035f28aab9d63fdb0.svg",
     "static/media/successPassword.svg": "/clever-tec/static/media/successPassword.06f9aa8f375b7d43f09f753b306dbc91.svg",
     "static/media/vector.svg": "/clever-tec/static/media/vector.ca98edd49cc09d6e10281b0d4c261877.svg",
-    "main.4b37256a.css.map": "/clever-tec/static/css/main.4b37256a.css.map",
-    "main.86015653.js.map": "/clever-tec/static/js/main.86015653.js.map"
+    "main.0dedd9cf.css.map": "/clever-tec/static/css/main.0dedd9cf.css.map",
+    "main.03c75d5c.js.map": "/clever-tec/static/js/main.03c75d5c.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b37256a.css",
-    "static/js/main.86015653.js"
+    "static/css/main.0dedd9cf.css",
+    "static/js/main.03c75d5c.js"
   ]
 }
